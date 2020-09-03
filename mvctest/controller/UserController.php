@@ -28,7 +28,6 @@
 		public function checkValidation($userT) {
 			$noerror=true;
             if(empty($userT->username)){
-				$message = "Field is empty.";
 				$noerror=false;
             }
             return $noerror;
