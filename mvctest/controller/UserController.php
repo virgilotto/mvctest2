@@ -38,8 +38,12 @@
                 $userT=new User();
                 if (isset($_POST['addbtn'])){
                     $userT->username = trim($_POST['username']);
+                    $userT->first_name = trim($_POST['first_name']);
+                    $userT->last_name = trim($_POST['last_name']);
+                    $userT->email = trim($_POST['email']);
                     $chk=$this->checkValidation($userT);
                     if($chk){
+                        //echo '<pre>'; print_r($userT); die();
                         $pid = $this->objum->insertRecord($userT);
                         if($pid>0){
                             $this->list();
@@ -61,6 +65,9 @@
                     $userT=unserialize($_SESSION['userT1']);
                     $userT->id = trim($_POST['id']);
                     $userT->username = trim($_POST['username']);
+                    $userT->first_name = trim($_POST['first_name']);
+                    $userT->last_name = trim($_POST['last_name']);
+                    $userT->email = trim($_POST['email']);
                     $chk=$this->checkValidation($userT);
                     if($chk)
                     {

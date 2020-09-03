@@ -34,6 +34,14 @@
                             <label>First Name</label>
                             <input type="text" name="first_name" class="form-control" value="<?php echo $userT->first_name; ?>">
                         </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" class="form-control" value="<?php echo $userT->last_name; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="email" class="form-control" value="<?php echo $userT->email; ?>">
+                        </div>
                         <input type="submit" name="addbtn" class="btn btn-primary" value="Submit">
                         <a href="../index.php" class="btn btn-default">Cancel</a>
                     </form>

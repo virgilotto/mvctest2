@@ -24,7 +24,7 @@
 			try
 			{
 				$this->open_db();
-				$query=$this->condb->prepare("INSERT INTO user (username,first_name,last_name,email) VALUES (?, ?, ?, ?)");
+				$query=$this->condb->prepare("INSERT INTO user ( username,first_name,last_name,email) VALUES (?, ?, ?, ?)");
 				$query->bind_param("ssss",$obj->username,$obj->first_name,$obj->last_name,$obj->email);
 				$query->execute();
 				$res= $query->get_result();
